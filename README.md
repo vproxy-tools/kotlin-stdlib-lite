@@ -10,7 +10,7 @@ If you think some kotlin classes or methods are very common and can be added int
 **gradle**
 
 ```groovy
-implementation 'io.vproxy:kotlin-stdlib-lite:0.0.1'
+runtimeOnly 'io.vproxy:kotlin-stdlib-lite:1.0.1'
 ```
 
 **maven**
@@ -19,6 +19,7 @@ implementation 'io.vproxy:kotlin-stdlib-lite:0.0.1'
 <dependency>
   <groupId>io.vproxy</groupId>
   <artifactId>kotlin-stdlib-lite</artifactId>
-  <version>0.0.1</version>
+  <version>1.0.1</version>
+  <scope>runtime</scope>
 </dependency>
 ```

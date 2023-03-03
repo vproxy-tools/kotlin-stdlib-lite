@@ -6,7 +6,7 @@ plugins {
 }
 
 group 'io.vproxy'
-version '0.0.1'
+version '1.0.1'
 
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
@@ -36,6 +36,10 @@ moduleConfig {
     moduleInfoPath = 'src/main/module/module-info.java'
     multiReleaseVersion = 9
     version = project.version
+}
+
+tasks.withType(GenerateModuleMetadata) {
+  enabled = false
 }
 
 publishing {
