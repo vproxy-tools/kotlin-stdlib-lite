@@ -8,8 +8,8 @@ plugins {
 group 'io.vproxy'
 version '1.0.1'
 
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
+sourceCompatibility = '9'
+targetCompatibility = '9'
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
@@ -30,12 +30,6 @@ java {
 
 javadoc {
     exclude '**/*.java'
-}
-
-moduleConfig {
-    moduleInfoPath = 'src/main/module/module-info.java'
-    multiReleaseVersion = 9
-    version = project.version
 }
 
 tasks.withType(GenerateModuleMetadata) {
