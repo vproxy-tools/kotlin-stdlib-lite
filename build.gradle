@@ -6,7 +6,7 @@ plugins {
 }
 
 group 'io.vproxy'
-version '1.0.1'
+version '1.0.1-jdk9'
 
 sourceCompatibility = '9'
 targetCompatibility = '9'
