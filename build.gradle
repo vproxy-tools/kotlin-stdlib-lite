@@ -50,7 +50,7 @@ publishing {
 
             pom {
                 name = 'kotlin-stdlib-lite'
-                description = 'javafx library'
+                description = 'lite version of kotlin stdlib for certain projects'
                 url = 'http://github.com/vproxy-tools/kotlin-stdlib-lite'
                 licenses {
                     license {
