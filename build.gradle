@@ -8,8 +8,12 @@ plugins {
 group 'io.vproxy'
 version '1.0.1-jdk9'
 
-sourceCompatibility = '9'
-targetCompatibility = '9'
+subprojects {
+    apply plugin: 'java'
+}
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
@@ -30,6 +34,10 @@ java {
 
 javadoc {
     exclude '**/*.java'
+}
+
+jar {
+    exclude "**/__placeholder__.class"
 }
 
 tasks.withType(GenerateModuleMetadata) {
@@ -84,3 +92,15 @@ signing {
     sign publishing.publications.maven
 }
 
+compileJava {
+    dependsOn project(':module-info').tasks.compileJava
+}
+
+project(":module-info") {
+    sourceCompatibility = '9'
+    targetCompatibility = '9'
+
+    compileJava {
+        destinationDirectory.set(file(project.rootProject.buildDir.getAbsolutePath() + "/classes/java/main"))
+    }
+}
