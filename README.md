@@ -7,6 +7,29 @@ If you think some kotlin classes or methods are very common and can be added int
 
 ## Usage
 
+This works on both jdk 8 and jdk >= 9
+
+**gradle**
+
+```groovy
+runtimeOnly 'io.vproxy:kotlin-stdlib-lite:1.0.2-jdk9'
+```
+
+**maven**
+
+```xml
+<dependency>
+  <groupId>io.vproxy</groupId>
+  <artifactId>kotlin-stdlib-lite</artifactId>
+  <version>1.0.2-jdk9</version>
+  <scope>runtime</scope>
+</dependency>
+```
+
+## If you are using JDK 8 and the above dep not working
+
+Some toolchain might not support `module-info` in root of the jar, you might use the java 8 version instead:
+
 **gradle**
 
 ```groovy
@@ -20,27 +43,6 @@ runtimeOnly 'io.vproxy:kotlin-stdlib-lite:1.0.1'
   <groupId>io.vproxy</groupId>
   <artifactId>kotlin-stdlib-lite</artifactId>
   <version>1.0.1</version>
-  <scope>runtime</scope>
-</dependency>
-```
-
-## For jdk >= 9
-
-If you are using java 9 or higher, you may use:
-
-**gradle**
-
-```groovy
-runtimeOnly 'io.vproxy:kotlin-stdlib-lite:1.0.1-jdk9'
-```
-
-**maven**
-
-```xml
-<dependency>
-  <groupId>io.vproxy</groupId>
-  <artifactId>kotlin-stdlib-lite</artifactId>
-  <version>1.0.1-jdk9</version>
   <scope>runtime</scope>
 </dependency>
 ```
