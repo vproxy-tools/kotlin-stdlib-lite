@@ -6,7 +6,7 @@ plugins {
 }
 
 group 'io.vproxy'
-version '1.0.1-jdk9'
+version '1.0.2-jdk9'
 
 subprojects {
     apply plugin: 'java'

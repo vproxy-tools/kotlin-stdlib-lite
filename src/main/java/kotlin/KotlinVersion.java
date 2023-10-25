@@ -1,7 +1,7 @@
 package kotlin;
 
 public class KotlinVersion {
-    public static final KotlinVersion CURRENT = new KotlinVersion(1, 0, 1);
+    public static final KotlinVersion CURRENT = new KotlinVersion(1, 0, 2);
 
     public final int major;
     public final int minor;
